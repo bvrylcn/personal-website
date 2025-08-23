@@ -5,51 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baver Yalçın | Web Geliştirici</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background-color: #000; /* Arka plan siyah */
-            color: #fff; /* Metin rengi beyaz */
+            box-sizing: border-box;
         }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
         header {
             background-color: #111;
             color: #fff;
             padding: 20px;
             text-align: center;
         }
+
         header img {
-            width: 100px; /* Logonun genişliği */
+            width: 100px;
             height: auto;
-            border-radius: 50%; /* Resmi yuvarlak yapar */
+            border-radius: 50%;
         }
+
         header h1 {
             margin: 10px 0 0;
         }
+
         nav {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             background-color: #222;
         }
+
         nav a {
             color: #fff;
             padding: 15px 20px;
             text-decoration: none;
             text-transform: uppercase;
+            display: block;
         }
+
         nav a:hover {
             background-color: #555;
         }
+
         section {
             padding: 20px;
-            margin: 10px;
+            margin: 10px auto;
+            max-width: 100%;
             background-color: #333;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
+
+        /* Liste noktalarını kaldır */
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
         .projects, .skills, .contact {
             margin-top: 20px;
         }
+
         footer {
             text-align: center;
             padding: 10px;
@@ -59,6 +82,7 @@
             width: 100%;
             bottom: 0;
         }
+
         .btn {
             display: inline-block;
             padding: 10px 20px;
@@ -66,9 +90,23 @@
             color: #fff;
             border-radius: 5px;
             text-decoration: none;
+            white-space: nowrap;
+            margin-top: 8px; /* buton cümleden biraz aşağıda olsun */
         }
+
         .btn:hover {
             background-color: #0056b3;
+        }
+
+        @media (max-width: 600px) {
+            nav a {
+                padding: 10px;
+                font-size: 14px;
+            }
+            section {
+                margin: 5px;
+                padding: 15px;
+            }
         }
     </style>
 </head>
@@ -114,7 +152,8 @@
 
     <section id="contact" class="contact">
         <h2>İletişim</h2>
-        <p>Benimle iletişime geçmek için <a href="mailto:baveryalcinofficial@icloud.com" class="btn">E-posta Gönder</a></p>
+        <p>Benimle iletişime geçmek için:</p>
+        <a href="mailto:baveryalcinofficial@icloud.com" class="btn">E-posta Gönder</a>
     </section>
 
     <footer>
